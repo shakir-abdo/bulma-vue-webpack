@@ -1,0 +1,39 @@
+{
+  "name": "bulma-vue-webpack",
+  "version": "1.0.0",
+  "description": "a starter template with Bulma , Vue ,font-awesome  and webpack",
+  "main": "src/app.js",
+  "repository": "http://some",
+  "author": "shakir abdo",
+  "license": "MIT",
+  "scripts": {
+    "dev": "webpack-dev-server",
+    "build": "webpack -p"
+  },
+  "dependencies": {
+    "bulma": "^0.6.2",
+    "font-awesome": "^4.7.0",
+    "vue": "^2.5.15"
+  },
+  "devDependencies": {
+    "babel-core": "^6.26.0",
+    "babel-loader": "^7.1.4",
+    "babel-preset-env": "^1.6.1",
+    "clean-webpack-plugin": "^0.1.19",
+    "cross-spawn": "3.0.0",
+    "css-loader": "^0.28.9",
+    "extract-text-webpack-plugin": "^3.0.2",
+    "favicons-webpack-plugin": "^0.0.7",
+    "file-loader": "^1.1.7",
+    "html-loader": "^0.5.5",
+    "html-webpack-plugin": "^3.0.6",
+    "node-sass": "^4.8.1",
+    "sass-loader": "^6.0.7",
+    "style-loader": "^0.20.2",
+    "url-loader": "^1.0.1",
+    "vue-loader": "^14.2.1",
+    "vue-template-compiler": "^2.5.15",
+    "webpack": "^3.11.0",
+    "webpack-dev-server": "^2.11.1"
+  }
+}
