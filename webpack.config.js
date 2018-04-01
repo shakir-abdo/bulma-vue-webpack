@@ -52,18 +52,41 @@ module.exports = {
                 use: ['html-loader']
             },
             {
-                test: /\.(jpg|png)$/,
+                test: /\.(gif|png|jpe?g)$/i,
                 use: [
-                    {
-                        loader: 'file-loader',
-                        options: {
-                            name: '[name].[ext]',
-                            outputPath: 'img/',
-                            publicPath: 'img/'
-                        }
+                  {
+                      loader:'file-loader',
+                      options:{
+                        name: '[hash].[ext]',
+                        outputPath: 'img/',
+                        publicPath: 'img/'
+                      }
+                },
+                  {
+                    loader: 'image-webpack-loader',
+                    options: {
+                      bypassOnDebug: true,
+                      mozjpeg: {
+                        progressive: true,
+                        quality: 65
+                      },
+                      optipng: {
+                        enabled: true,
+                      },
+                      pngquant: {
+                        quality: '65-90',
+                        speed: 4
+                      },
+                      gifsicle: {
+                        interlaced: false,
+                      },
+                      webp: {
+                        quality: 75
+                      }
                     }
-                ]
-            }, {
+                  }
+                ],
+              }, {
                 test: /\.woff(2)?(\?v=[0-9]\.[0-9]\.[0-9])?$/,
                 loader: "url-loader?limit=10000&mimetype=application/font-woff",
                 options: {
